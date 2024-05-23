@@ -1,4 +1,22 @@
 module.exports = {
   root: true,
-  extends: '@react-native',
+  extends: ['@react-native', 'plugin:prettier/recommended'],
+  plugins: ['prettier'],
+  rules: {
+    'prettier/prettier': [
+      'error',
+      {
+        endOfLine: 'auto',
+      },
+    ],
+    'no-console': 'warn',
+    quotes: ['error', 'single'],
+    semi: ['error', 'always'],
+    indent: ['error', 2],
+    'no-unused-vars': 'warn',
+    'comma-dangle': ['error', 'always-multiline'],
+    eqeqeq: ['error', 'always'],
+    'no-multiple-empty-lines': ['error', {max: 1}],
+    'space-before-function-paren': ['error', 'never'],
+  },
 };
